@@ -1,20 +1,22 @@
+/* Importing 3 different fonts from google fonts */
 @import url('https://fonts.googleapis.com/css?family=Rasa');
 @import url("http://fonts.googleapis.com/css?family=Lato:300,700");
 @import url('https://fonts.googleapis.com/css?family=Vollkorn+SC');
 
+/* Setting up the body for all connected html pages where the padding is for the body to be below the navbar */
 body {
 	padding-top: 51px;
 	background-color: #222233;
 }
 
-/* Header bar */
+/* Header bar for the navbar to be on which has a high z-index so it is always on top */
 #header {
-		background-color: rgb(34,34,34);
-		height: 51px;
-		width: 100%;
-		top: 0;
-		position: fixed;
-		z-index: 99;
+	background-color: rgb(34,34,34);
+	height: 51px;
+	width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: 99;
 }
 
 /* Navigation Bar */
@@ -40,12 +42,14 @@ body {
 
 
 /* Home page code */
+/* Section with id home */
 #home {
 	position: relative;
 	text-align: center;
 	color: white;
 }
 
+/* Making the h1 and h2 text and the picture to be in the centre of the page */
 #home > h1 {
 	position: absolute;
 	left: 50%;
@@ -70,6 +74,7 @@ body {
 	transform: translateX(-50%);
 }
 
+/* Text below the picture */
 #aboutMe {
 	color: #AACCFF;
 }
@@ -84,66 +89,70 @@ body {
 
 
 /* Projects page code */
+/* Positioning the project title */
 #projectTitle {
-  position: absolute;
+  	position: absolute;
 	left: 50%;
 	top: 23vw;
 	transform: translate(-50%, -50%);
 	font-family: 'Rasa', serif;
 	font-size: 10vw;
-  color: #000;
+  	color: #000;
 }
 
+/* Setting the picture width to be minimum 650px so it stays the same width as the smallest the grid can be to be readable on mobile */
 #projectImg {
 	min-width: 650px;
 }
 
 #projectsMain > h2 {
-  text-align: center;
-  font-size: 25px;
+  	text-align: center;
+  	font-size: 25px;
 	color: #AACCFF;
 }
 
-/* This is for the grid system boxes */
+/* Code for the grid system which has a minimum width of 650px to be readable on mobiles */
 .wrapper {
-  max-width: 1920px;
-  min-width: 650px;
-  margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  	max-width: 1920px;
+  	min-width: 650px;
+  	margin: 0 auto;
+  	font: 1.2em Helvetica, arial, sans-serif;
 }
 
 .wrapper > * {
-  border: 2px solid #AACCFF;
-  background-color: white;
-  border-radius: 5px;
-  padding: 10px;
+  	border: 2px solid #AACCFF;
+  	background-color: white;
+  	border-radius: 5px;
+  	padding: 10px;
 }
 
-/* This is where you set how many grid colomns you want */
+/* Setting how many grid colomns you want and the gap between each */
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-gap: 20px;
+  	display: grid;
+  	grid-template-columns: repeat(12, [col-start] 1fr);
+  	grid-gap: 20px;
 }
 
+/* Setting how many colomns is needed for each project */
 .project1 {
-  grid-column: col-start 1 / span 3;
+  	grid-column: col-start 1 / span 3;
 }
 
 .project2 {
-  grid-column: col-start 4 / span 3;
+  	grid-column: col-start 4 / span 3;
 }
 
 .project3 {
-  grid-column: col-start 7 / span 3;
+  	grid-column: col-start 7 / span 3;
 }
 
 .project4 {
-  grid-column: col-start 10 / span 3;
+  	grid-column: col-start 10 / span 3;
 }
 
 
 /* CV page code */
+/* Setting the borders, padding and text for the CV page */
 #CVMain {
 	border: 3px solid #fff;
 	color: #AACCFF;
@@ -183,6 +192,8 @@ table {
 	padding-bottom: 20px;
 }
 
+/* Code for the Form */
+/* Setting the color and size for the labels */
 label {
 	color: #101651;
 	font-size: 20px;
@@ -213,6 +224,7 @@ input[type=submit]:hover {
 	color: white;
 }
 
+/* Code for the container around the form */
 .container {
 	border-radius: 4px;
 	background-color: #fafafa;
@@ -227,6 +239,7 @@ input[type=submit]:hover {
 	color: white;
 }
 
+/* Setting so the text link to go back is not purple for a visited page */
 #formSubmitBody a:visited {
 	color: #30aabc;
 }
